@@ -13,6 +13,7 @@ add_executable(prog
 target_link_libraries(prog PRIVATE shared_pointer)
 
 include(FetchContent)
+
 FetchContent_Declare(
 	googletest
     	URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
@@ -33,4 +34,5 @@ target_link_libraries(shared_pointer_test
 		GTest::gtest
 		GTest::gtest_main
 )
+
 add_test(NAME shared_pointer_test COMMAND shared_pointer_test)
